@@ -3,6 +3,9 @@ let webservice = require('./webservice');
 let process = require('process');
 
 (async function() {
-    webservice.initialize(parseInt(process.argv[2], 10) || 80);
+    // @TODO: should read this values from environment variables
+    const DEFAULT_PORT = 8000
+    const PORT = parseInt(process.argv[2], 10) || DEFAULT_PORT
+    webservice.initialize(PORT);
     await pathfinderd.startup();
 })();
