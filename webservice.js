@@ -5,8 +5,6 @@ let fs = require("fs");
 let path = require("path");
 const pathfinderd = require("./pathfinderd");
 
-let port = 80;
-
 let respond = function(response, data) {
     response.writeHead(200, {
         "Content-Type": "application/json",
