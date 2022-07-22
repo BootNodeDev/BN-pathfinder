@@ -1,0 +1,36 @@
+{
+  "name": "pathfinder",
+  "version": "1.0.0",
+  "description": "Pathfinder is a collection of tools related to computing transitive transfers in the [CirclesUBI](https://joincircles.net) trust graph.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js 8000",
+    "prod": "pm2 start index.js -- --port 8000",
+    "stop": "pm2 stop all",
+    "restart": "pm2 restart all",
+    "status": "pm2 list",
+    "logs": "pm2 logs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriseth/pathfinder.git"
+  },
+  "author": "chriseth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chriseth/pathfinder/issues"
+  },
+  "homepage": "https://github.com/chriseth/pathfinder#readme",
+  "dependencies": {
+    "ethers": "^5.6.9",
+    "pm2": "^5.2.0"
+  },
+  "engines": {
+    "npm": ">=6",
+    "node": ">=14"
+  }
+}
